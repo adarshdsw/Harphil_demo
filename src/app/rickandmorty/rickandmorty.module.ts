@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { HttpClientModule } from '@angular/common/http';
 import { RickandmortyRoutingModule } from './rickandmorty-routing.module';
 
 
@@ -8,7 +8,8 @@ import { RickandmortyRoutingModule } from './rickandmorty-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    RickandmortyRoutingModule
+    RickandmortyRoutingModule,
+    HttpClientModule
   ]
 })
 export class RickandmortyModule { }
