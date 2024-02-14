@@ -1,1 +1,36 @@
-<p>characters-list works!</p>
+<div class="container">
+    <div class="col-12">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Harphil Software Solutions</a>
+        </nav>
+        <div class="row">
+            <div>
+                <span class="p-3 ml-3">Charcters List</span>
+            </div>
+            <div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Image</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Species</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let character of characters">
+                            <td><img src="{{character.image}}" height="100" width="100"></td>
+                            <td>{{character.name}}</td>
+                            <td>{{character.gender}}</td>
+                            <td>{{character.species}}</td>
+                            <td>{{character.status}}</td>
+                            <td><button type="button" (click)="characterDetail(character.id)" class="btn btn-link">Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
